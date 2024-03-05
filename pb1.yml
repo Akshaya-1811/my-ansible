@@ -1,0 +1,14 @@
+---
+- name: Update all servers
+  hosts: all
+
+  tasks:
+  - name: ensure file is created
+    ansible.builtin.file:
+      path: /home/ubuntu/my_file
+      state: touch
+
+   - name: ensure directory is created
+    ansible.builtin.file:
+      path: /home/ubuntu/my_dir
+      state: directory
