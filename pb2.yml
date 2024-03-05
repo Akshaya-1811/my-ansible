@@ -1,7 +1,8 @@
 ---
 - name: Update n1 server
   hosts: n1
-
+  become: yes
+  
   tasks:
   - name: Ensure system is updated
     ansible.builtin.apt:
