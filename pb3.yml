@@ -5,11 +5,11 @@
   tasks:
   - name: Ensure file is deleted
     ansible.builtin.file:
-      path: /var/www/html/* 
+      path: /var/www/html/index.nginx-debian.html 
       state: absent
 
   - name: Ensure app is deployed
     ansible.builtin.git:
       repo: https://github.com/Akshaya-1811/login-app.git
-      path: /var/www/html 
+      dest: /var/www/html 
       clone: true
