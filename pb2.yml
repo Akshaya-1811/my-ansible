@@ -1,0 +1,13 @@
+---
+- name: Update n1 server
+  hosts: n1
+
+  tasks:
+  - name: Ensure system is updated
+    ansible.builtin.apt:
+      update_cache: true
+
+  - name: Ensure nginx installed
+    ansible.builtin.apt:
+      name: nginx
+      state: present    
