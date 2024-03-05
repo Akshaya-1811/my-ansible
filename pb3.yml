@@ -11,4 +11,5 @@
   - name: Ensure app is deployed
     ansible.builtin.git:
       repo: https://github.com/Akshaya-1811/login-app.git
-      path: /var/www/html   
+      path: /var/www/html 
+      clone: true
