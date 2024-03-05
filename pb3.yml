@@ -1,0 +1,14 @@
+- name: Update n1 server
+  hosts: n1
+  become: yes
+  
+  tasks:
+  - name: Ensure file is deleted
+    ansible.builtin.file:
+      path: /var/www/html/* 
+      state: absent
+
+  - name: Ensure app is deployed
+    ansible.builtin.git:
+      repo: https://github.com/Akshaya-1811/login-app.git
+      path: /var/www/html   
